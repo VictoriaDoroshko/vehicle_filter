@@ -8,7 +8,7 @@ To get started, you'll need to clone the repository and install all dependencies
 
 1. **Clone the repository**:
 
-git clone git@github.com:VictoriaDoroshko/vehicle_filter.git
+git clone git@github.com:VictoriaDoroshko/vehicle_filter.git](https://github.com/VictoriaDoroshko/vehicle_filter.git)
 cd vehicle-filters
 
 ### Key Points:
