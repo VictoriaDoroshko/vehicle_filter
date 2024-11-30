@@ -25,12 +25,16 @@ export async function generateStaticParams() {
   }
 }
 
-export default function ResultPage({
+export default async function ResultPage({
   params,
 }: {
   params: { makeId: string; year: string };
 }) {
-  const { makeId, year } = params;
+  const { makeId, year } = await params || {};
+
+  if (!makeId || !year) {
+    return <div>Error: Invalid route parameters.</div>;
+  }
 
   return (
     <div className="grid grid-rows-[auto_1fr] items-center justify-items-center min-h-screen bg-gray-100 p-8 sm:p-20 gap-16">

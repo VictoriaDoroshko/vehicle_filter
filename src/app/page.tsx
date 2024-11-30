@@ -61,7 +61,7 @@ export default function Home() {
               className="mt-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"
             >
               <option value="" className="text-gray">
-                Make
+                Choose a Make
               </option>
               {makes.map((make) => (
                 <option key={make.MakeId} value={make.MakeId}>

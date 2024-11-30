@@ -1,6 +1,8 @@
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
 export const fetchMakes = async () => {
   const response = await fetch(
-    'https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json'
+      `${apiUrl}/vehicles/GetMakesForVehicleType/car?format=json`
   );
   if (!response.ok) {
     throw new Error('Failed to fetch vehicle makes');
@@ -20,7 +22,7 @@ export const fetchYears = () => {
 
 export const fetchModels = async (makeId: string, year: string) => {
   const res = await fetch(
-    `https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`
+    `${apiUrl}/vehicles/GetModelsForMakeIdYear/makeId/${makeId}/modelyear/${year}?format=json`
   );
   const data = await res.json();
   return data.Results || [];
